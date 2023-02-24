@@ -76,25 +76,25 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
-   var suma = 0
+   /*var suma = 0
    for(let i=0; i<resultadosTest.legth; i++){
       suma+=resultadosTest[i]
    }
    var promedio = suma/resultadosTest.length
-   return promedio
+   return promedio*/
 }console.log(promedioResultadosTest([10, 10, 16, 12]))/*!for*/
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   var numeroMayorGuardado = 0
+   /*var numeroMayorGuardado = 0
    for(var c=0; c<arrayOfNums.legth; c++){
       if (arrayOfNums[c]>arrayOfNums[c+1] && numeroMayorGuardado< arrayOfNums[c]){
          numeroMayorGuardado=arrayOfNums[c];
       }
    }
-   return numeroMayorGuardado
+   return numeroMayorGuardado*/
 }console.log(numeroMasGrande([10, 10, 16, 12]))/*!for*/
 
 function multiplicarArgumentos() {
@@ -155,7 +155,7 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   var nuevoArray=[]
+   /*var nuevoArray=[]
    for(let a=0; a<array.legth; a++){
       if (array[a]=="Enero" || array[a]=="Marzo" || array[a]=="Noviembre"){
          nuevoArray.push(array[a])
@@ -163,7 +163,7 @@ function mesesDelAño(array) {
    }
    if (nuevoArray.includes("Enero")==true && nuevoArray.includes("Marzo")==true && nuevoArray.includes("Noviembre")==true){
       return nuevoArray
-   } else return "No se encontraron los meses pedidos"
+   } else return "No se encontraron los meses pedidos"*/
 }console.log(mesesDelAño(["Enero","Marzo","Febrero","Noviembre"]))/*!for*/
 
 function tablaDelSeis() {
