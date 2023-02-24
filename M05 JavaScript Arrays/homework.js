@@ -61,7 +61,7 @@ function arrayContiene(array, elemento) {
    var verif=array.includes(elemento)
    if (verif) return true
    else return false
-}console.log(arrayContiene([97, 100, 80, 55, 72, 94], 880)) //corregir
+}console.log(arrayContiene([97, 100, 80, 55, 72, 94], 80)) 
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
@@ -70,19 +70,19 @@ function agregarNumeros(arrayOfNums) {
    var resultado=0;
    arrayOfNums.forEach(a => {resultado += a})
    return resultado
-}
+}console.log(agregarNumeros([10, 10, 16, 8 ,-4]))
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
    var suma = 0
-   var promedio = suma/resultadosTest.length
-   for(var c=0; c<resultadosTest.legth; c++){
-      suma+=resultadosTest[c]
+   for(let i=0; i<resultadosTest.legth; i++){
+      suma+=resultadosTest[i]
    }
+   var promedio = suma/resultadosTest.length
    return promedio
-}
+}console.log(promedioResultadosTest([10, 10, 16, 12]))/*!for*/
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
@@ -95,7 +95,7 @@ function numeroMasGrande(arrayOfNums) {
       }
    }
    return numeroMayorGuardado
-}
+}console.log(numeroMasGrande([10, 10, 16, 12]))/*!for*/
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
@@ -107,17 +107,17 @@ function multiplicarArgumentos() {
       multiplicacion*=arguments[c]
    }
    return multiplicacion
-}
+}console.log(multiplicarArgumentos(5, 5))
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
    var contador=0
-   array.every(a=>{
+   array.forEach(a=>{
       if (a>18) contador+=1
    })
    return contador
-}
+}console.log(cuentoElementos([10, 10, 18, 21]))
 
 function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
@@ -126,7 +126,7 @@ function diaDeLaSemana(numeroDeDia) {
    // Tu código:
    if (numeroDeDia==1 || numeroDeDia==7) return "Es fin de semana"
    else return "Es dia laboral"
-}
+}console.log(diaDeLaSemana(1))
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
@@ -136,19 +136,19 @@ function empiezaConNueve(num) {
    var list=str.split("")
    if (list[0]=="9") return true
    else return false
-}
+}console.log(empiezaConNueve(59832))
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
    var comprobador = false
-   array.every(a => {
+   array.forEach(a => {
       if (a===array[0]) comprobador=true;
       else comprobador=false
    })
    return comprobador
-}
+}console.log(todosIguales([20, 20, 20, 20]))
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
@@ -156,26 +156,26 @@ function mesesDelAño(array) {
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
    var nuevoArray=[]
-   for(var a=0; a<array.legth; a++){
+   for(let a=0; a<array.legth; a++){
       if (array[a]=="Enero" || array[a]=="Marzo" || array[a]=="Noviembre"){
          nuevoArray.push(array[a])
       }
    }
-   if (nuevoArray.includes("Enero") && nuevoArray.includes("Marzo") && nuevoArray.includes("Noviembre")){
+   if (nuevoArray.includes("Enero")==true && nuevoArray.includes("Marzo")==true && nuevoArray.includes("Noviembre")==true){
       return nuevoArray
    } else return "No se encontraron los meses pedidos"
-}
+}console.log(mesesDelAño(["Enero","Marzo","Febrero","Noviembre"]))/*!for*/
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
    var arreglo=[]
-   for(var c=0; c<=11; c++){
+   for(var c=0; c<11; c++){
       arreglo.push(c*6)
    }
    return arreglo
-}
+}console.log(tablaDelSeis())
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
@@ -185,7 +185,8 @@ function mayorACien(array) {
    array.forEach(a=>{
       if (a>100) arregloN.push(a)
    })
-}
+   return arregloN
+}console.log(mayorACien([100, 4, 56, 78, 200, 120, 7, 160, 148, 22]))
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -203,31 +204,30 @@ function breakStatement(num) {
    var interrupcion=false
    for(var i=0; i<10; i++){
       num+=2
-      if (num=i) {
-         interrupcion
+      if (num==i) {
+         interrupcion=true
          break
-      }
-      arreglo.push(num)
+      }else arreglo.push(num)
    }
-   if (!interrupcion) return arreglo
+   if (!interrupcion) return arreglo;
    else return msjError
-}
+}console.log(breakStatement(-2))
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
    // Guardar cada nuevo valor en un array y retornarlo.
-   // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
+   // Cuando el número de iteraciones alcance el valor 5, NO SE SUMA ese caso y
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
    var arreglo=[]
    for(var i=0; i<10; i++){
+      if (i==5) continue
       num+=2
-      if (i=5) continue
       arreglo.push(num)
    }
    return arreglo
-}
+}console.log(continueStatement(5))
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
