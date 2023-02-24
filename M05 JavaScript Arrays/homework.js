@@ -76,25 +76,25 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
-   /*var suma = 0
-   for(let i=0; i<resultadosTest.legth; i++){
+   var suma = 0
+   for(let i=0; i<resultadosTest.length; i++){
       suma+=resultadosTest[i]
    }
    var promedio = suma/resultadosTest.length
-   return promedio*/
+   return promedio
 }console.log(promedioResultadosTest([10, 10, 16, 12]))/*!for*/
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   /*var numeroMayorGuardado = 0
-   for(var c=0; c<arrayOfNums.legth; c++){
+   var numeroMayorGuardado = 0
+   for(var c=0; c<arrayOfNums.length; c++){
       if (arrayOfNums[c]>arrayOfNums[c+1] && numeroMayorGuardado< arrayOfNums[c]){
          numeroMayorGuardado=arrayOfNums[c];
       }
    }
-   return numeroMayorGuardado*/
+   return numeroMayorGuardado
 }console.log(numeroMasGrande([10, 10, 16, 12]))/*!for*/
 
 function multiplicarArgumentos() {
@@ -106,8 +106,11 @@ function multiplicarArgumentos() {
    for(var c=0; c<arguments.length; c++){
       multiplicacion*=arguments[c]
    }
+   if (arguments.length==0) {
+      multiplicacion=0; 
+   }
    return multiplicacion
-}console.log(multiplicarArgumentos(5, 5))
+}console.log(multiplicarArgumentos())
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -155,16 +158,16 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   /*var nuevoArray=[]
-   for(let a=0; a<array.legth; a++){
+   var nuevoArray=[]
+   for(let a=0; a<array.length; a++){
       if (array[a]=="Enero" || array[a]=="Marzo" || array[a]=="Noviembre"){
          nuevoArray.push(array[a])
       }
    }
    if (nuevoArray.includes("Enero")==true && nuevoArray.includes("Marzo")==true && nuevoArray.includes("Noviembre")==true){
       return nuevoArray
-   } else return "No se encontraron los meses pedidos"*/
-}console.log(mesesDelAño(["Enero","Marzo","Febrero","Noviembre"]))/*!for*/
+   } else return "No se encontraron los meses pedidos"
+}console.log(mesesDelAño(["Enero","Marzo","Febrero","Noviembre"]))
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
