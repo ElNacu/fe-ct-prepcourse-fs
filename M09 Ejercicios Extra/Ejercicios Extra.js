@@ -133,12 +133,12 @@ function buscoInterseccion(array1, array2) {
    if (array1.length<array2.length) {arrMayor=array2; arrMenor=array1}
    else {arrMayor=array1; arrMenor=array2}
    for (var i=0; i<arrMayor.length; i++){
-      for (var c=0; c<arrMenor.length; c++){ //probar con forEach
-         if (i==c) arrFinal.push(arrMayor[i])
+      for (var c=0; c<arrMenor.length; c++){ 
+         if (arrMayor[i]==arrMenor[c]) arrFinal.push(arrMayor[i]) //importante especificar el arr'[i]'
       }
    }
    return arrFinal
-}console.log(buscoInterseccion([1, 2, 3],[3,4,5,1]))
+}
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
